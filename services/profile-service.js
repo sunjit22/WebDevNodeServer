@@ -1,15 +1,10 @@
 let profile = require('../data/profile.json');
 
 module.exports = (app) => {
+    const getProfile = (req, res) => res.json(profile);
+    app.get('/api/profile', getProfile);
 
-    const getCurrentProfile = (req, res) => {
-        res.json(profile);
-    }
-    app.get('/api/profile', getCurrentProfile);
-
-
-
-    const updateCurrentProfile = (req, res) => {
+    const updateProfile = (req, res) => {
         console.log("req.body" + req.body);
         console.log("JSON req.body- " + JSON.stringify(req.body));
         console.log("JSON req.body.name - " + req.body.newName);
@@ -24,5 +19,5 @@ module.exports = (app) => {
         console.log("New profile- " + JSON.stringify(profile));
         res.json(profile);
     }
-    app.put('/api/profile', updateCurrentProfile );
-}
+    app.put('/api/profile', updateProfile);
+};
