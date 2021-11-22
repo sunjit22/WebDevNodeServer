@@ -11,10 +11,10 @@ module.exports = (app) => {
         const newTweet = {
             _id: (new Date()).getTime() + '',
             "topic": "Web Development",
-            "userName": "ReactJS",
+            "userName": "Sunjit Dhillon",
             "verified": false,
-            "handle": "ReactJS",
-            "time": "2h",
+            "handle": "sunjit22",
+            "time": "Just Now",
             "avatar-image": "/images/profile_pic.jpg",
             "logo-image": "/images/profile_pic.jpg",
             "stats": {
