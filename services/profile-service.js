@@ -1,22 +1,23 @@
-const dao = require("../db/profile/profile-dao");
-const profile = require("../data/profile.json");
+let profile = require('../data/profile.json');
+
 module.exports = (app) => {
-    const getProfile = (req, res) => {
-        console.log("getProfile from server");
-        dao.getProfile()
-            .then(profile => res.json(profile));
-    }
-    app.get('/rest/profile', getProfile);
+    const getProfile = (req, res) => res.json(profile);
+    app.get('/api/profile', getProfile);
 
     const updateProfile = (req, res) => {
-        console.log("updateProfile from server");
-        const id = req.params.id;
-        console.log("req.body from server" + req.body);
-        dao.updateProfile(id, req.body)
-            .then(updatedProfile => {
-                console.log(updatedProfile);
-                return res.json(updatedProfile)
-            });
+        console.log("req.body" + req.body);
+        console.log("JSON req.body- " + JSON.stringify(req.body));
+        console.log("JSON req.body.name - " + req.body.newName);
+        profile = {
+            ...profile,
+            name: req.body.newName,
+            bio: req.body.newBio,
+            location: req.body.newLocation,
+            website: req.body.newWebsite,
+            dateOfBirth: req.body.newDateOfBirth
+        }
+        console.log("New profile- " + JSON.stringify(profile));
+        res.json(profile);
     }
-    app.put('/rest/profile/:id', updateProfile);
+    app.put('/api/profile', updateProfile);
 };

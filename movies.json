@@ -1,8 +1,0 @@
-{"_id":{"$oid":"61a439c02ff25485746863cc"},"title":"Aliens","rating":4.5}
-{"_id":{"$oid":"61a43a232ff25485746863cd"},"title":"Terminator","rating":4.8}
-{"_id":{"$oid":"61a43a282ff25485746863ce"},"title":"Avatar","rating":4.7}
-{"_id":{"$oid":"61a43a302ff25485746863cf"},"title":"Dune","rating":4.9}
-{"_id":{"$oid":"61a43a3c2ff25485746863d0"},"title":"HelloWorld","rating":4.9}
-{"_id":{"$oid":"61a43a402ff25485746863d1"},"title":"HelloWorld","rating":4.9}
-{"_id":{"$oid":"61a43a5c2ff25485746863d2"},"title":"Transformers","rating":4.4}
-{"_id":{"$oid":"61a43a6f2ff25485746863d3"},"title":"Finding Nemo","rating":4.5}
